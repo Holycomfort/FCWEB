@@ -1,0 +1,19 @@
+<html>
+<head><meta charset=“utf-8”/>
+    <title>公告栏</title>
+</head>
+<body>
+<h1>{{ username }},请查收公告</h1>
+<main role=“main” class=“container”>
+    <div class=“blog-post”>
+        {% for msg in msgs %}
+            <div>
+                <h2 class=“blog-post-title”>{{msg.title}}</h2>
+                <p class=“blog-post-meta”>{{msg.created_at}}</p>
+                <p>{{msg.content}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+</body>
+</html>
