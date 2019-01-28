@@ -10,8 +10,8 @@
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        {{ error }}
         <input type="submit" value="注册">
+        {{ error }}
     </form>
 <p><a href="http://127.0.0.1:8000/"><button>退出</button></a></p>
 </body>
