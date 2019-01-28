@@ -3,16 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>用户注册</title>
+    <title>上传文件</title>
 </head>
 <body>
-<h1>注册</h1>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="注册">
-        {{ error }}
-    </form>
-<p><a href="http://127.0.0.1:8000/"><button>退出</button></a></p>
+   <form action="" enctype = "multipart/form-data" method = "POST" >
+       {% csrf_token %}
+       {{ form.as_p }}
+       <input type="submit" value="上传">
+   </form>
 </body>
 </html>

@@ -5,12 +5,12 @@
 <body>
 <h1>{{ username }},请查收公告</h1>
 <main role=“main” class=“container”>
-    <div class=“blog-post”>
+    <div class=“notice-post”>
         {% for msg in msgs %}
             <div>
-                <h2 class=“blog-post-title”>{{msg.title}}</h2>
-                <p class=“blog-post-meta”>{{msg.created_at}}</p>
-                <p>{{msg.content}}</p>
+                <h2 class=“blog-post-title”>{{ msg.title }}</h2>
+                <p class=“blog-post-meta”>{{ msg.created_at }}</p>
+                <p>{{ msg.content }}</p>
             </div>
         {% endfor %}
     </div>

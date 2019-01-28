@@ -11,6 +11,15 @@
 <p><label>您的用户名：{{ user.username }}</label></p>
 <p><a href="notice/"><button>查看公告</button></a></p>
 <p><a href="upload/"><button>上传代码</button></a></p>
+<p><a href="writeblog/"><button>撰写博客</button></a></p>
+<h3>选手列表</h3>
+    <div class=“user-post”>
+        {% for player in players %}
+            <div>
+                <p><a href="visit{{ player.id }}/">{{ player.username }}</a></p>
+            </div>
+        {% endfor %}
+    </div>
 <p><a href="http://127.0.0.1:8000/"><button>退出</button></a></p>
 </body>
 </html>
