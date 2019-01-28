@@ -24,7 +24,11 @@ urlpatterns = [
     path('register/', views.register_request),
     path('user<int:uid>/', views.user_request),
     path('user<int:uid>/notice/', views.notice_request),
-    path('user<int:uid>/upload/', views.upload_request)
+    path('user<int:uid>/upload/', views.upload_request),
+    path('user<int:uid>/writeblog/', views.writeblog_request),
+    path('user<int:uid>/visit<int:vid>/', views.visit_request),
+    path('user<int:uid>/delete/<int:id>/<str:type>/', views.delete_request),
+    path('download/<int:id>/', views.download_request)
 ]
 
 # 设置静态文件路径
