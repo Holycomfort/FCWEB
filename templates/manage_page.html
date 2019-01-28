@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>访问界面</title>
+</head>
+<body>
+<h1>{{ user.username }}，您好！</h1>
+<h2>博客</h2>
+    <div class=“blog-post”>
+        {% for blog in blogs %}
+            <h3 class=“blog-post-title”>{{ blog.title }}</h3>
+            <p class=“blog-post-meta”>{{ blog.created_at }}</p>
+            <p>{{ blog.content }}</p>
+            <a href="../delete/{{ blog.id }}/blog/"><button>删除</button></a>
+        {% endfor %}
+    </div>
+<h2>文件</h2>
+    <div class=“file-post”>
+        {% for file in files %}
+            <p>{{ file.name }}</p>
+            <a href="../delete/{{ file.id }}/file/"><button>删除</button></a>
+        {% endfor %}
+    </div>
+</body>
+</html>
