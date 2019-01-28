@@ -1,4 +1,5 @@
 from django import forms
+from .models import Blog, UploadFile
 
 
 class UserRegister(forms.Form):
@@ -10,3 +11,15 @@ class UserRegister(forms.Form):
 class UserLogin(forms.Form):
     username = forms.CharField(label='用户名', max_length=100)
     password = forms.CharField(label='密码', widget=forms.PasswordInput())
+
+
+class BlogForm(forms.ModelForm):
+    class Meta:
+        model = Blog
+        fields = {'title', 'content'}
+
+
+class UploadFileForm(forms.ModelForm):
+    class Meta:
+        model = UploadFile
+        fields = {'name', 'file'}
