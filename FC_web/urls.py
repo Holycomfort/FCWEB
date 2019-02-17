@@ -23,6 +23,7 @@ urlpatterns = [
     path('', views.login_request),
     path('register/', views.register_request),
     path('user<int:uid>/', views.user_request),
+    path('user<int:uid>/rank/', views.rank_request),
     path('user<int:uid>/notice/', views.notice_request),
     path('user<int:uid>/upload/', views.upload_request),
     path('user<int:uid>/writeblog/', views.writeblog_request),
