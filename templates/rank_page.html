@@ -1,0 +1,20 @@
+<html>
+<head><meta charset=“utf-8”/>
+    <title>排行榜</title>
+</head>
+<body>
+<h1>您目前的排名是：{{ rankid }}</h1>
+<main role=“main” class=“container”>
+    <div class=“notice-post”>
+    <div>
+        <p>排名 用户名 得分</p>
+    </div>
+        {% for rank in ranks %}
+            <div>
+                <p>{{ forloop.counter }} {{ rank.username }} {{ rank.score }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+</body>
+</html>
