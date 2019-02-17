@@ -1,5 +1,6 @@
 from django import forms
 from .models import Blog, UploadFile
+from django.contrib import messages
 
 
 class UserRegister(forms.Form):
